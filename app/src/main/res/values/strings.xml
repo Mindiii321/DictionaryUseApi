@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DictionaryUseApi</string>
+    <string name="meaning">Meaning</string>
+    <string name="search">Search</string>
+    <string name="name">Name</string>
+    <string name="phonetics">Phonetics</string>
+    <string name="definition">Definition</string>
+    <string name="defination">Defination</string>
+    <string name="text">text</string>
+</resources>

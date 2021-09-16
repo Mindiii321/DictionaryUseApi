@@ -1,0 +1,1 @@
+class modelJson : ArrayList<modelJsonItem>()

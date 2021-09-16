@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E1EA"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2C638F"
+        app:titleMarginStart="40dp" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/speakBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="4dp"
+        android:onClick="getSpeechInput"
+        android:src="@drawable/mic"
+        tools:ignore="UsingOnClickInXml" />
+
+    <EditText
+        android:id="@+id/editSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawableStart="@drawable/search"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="textPersonName"
+
+        android:textSize="30sp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="#2C638F"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_result_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editSearch"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phonetics"
+            android:textColor="#2C638F"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_result_phonetics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editSearch"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text"
+            android:textColor="#2C638F"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_result_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editSearch"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Definition:"
+            android:textColor="#2C638F"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_result_Definition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editSearch"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/phonetics_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editSearch"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="20dp"
+        android:onClick="getInputToSpeech"
+        android:src="@drawable/campaign" />
+
+
+
+
+</RelativeLayout>
